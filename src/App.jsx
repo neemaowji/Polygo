@@ -8,13 +8,15 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import Button from '@mui/material/Button';
-import Roadmap from './components/roadmap';
+import Navbar from './components/Navbar';
+import Roadmap from './components/Roadmap';
+
 
 
 function App() {
   return (
     <>
+      <Navbar></Navbar>
       <Roadmap></Roadmap>
     </>
   )
