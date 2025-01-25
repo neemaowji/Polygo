@@ -11,7 +11,9 @@ import Roadmap from './components/Roadmap';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Practice from './components/Practice';
-
+// Firebase services
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore'; 
 
 
 function App() {

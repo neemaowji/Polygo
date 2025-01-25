@@ -217,6 +217,7 @@ const Practice = () => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
+    
     <Box sx={{ p: 3, maxWidth: 600, mx: 'auto' }}>
       <Box sx={{ mb: 3 }}>
         <LinearProgress 
