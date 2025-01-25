@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Box } from '@mui/material';
+import { Link } from 'react-router'
+
 
 const Roadmap = () => {
   const nodes = [
@@ -36,6 +38,8 @@ const Roadmap = () => {
           }}
         >
           <Button
+            component={Link}
+            to={`/learn/${node.text}`}
             variant="contained"
             sx={{
               width: '200px',
@@ -46,6 +50,7 @@ const Roadmap = () => {
           >
             {node.text}
           </Button>
+
         </Box>
       ))}
     </Box>
