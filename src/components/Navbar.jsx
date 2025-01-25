@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['About', 'Learn','Practice'];
+const pages = ['about', 'learn','practice'];
 const settings = ['Account', 'Logout'];
 
 function Navbar() {
@@ -44,7 +44,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -115,7 +115,7 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                href={page}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
