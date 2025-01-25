@@ -9,14 +9,13 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import Button from '@mui/material/Button';
+import Roadmap from './components/roadmap';
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Button variant="contained">Hello world</Button>
+      <Roadmap></Roadmap>
     </>
   )
 }
