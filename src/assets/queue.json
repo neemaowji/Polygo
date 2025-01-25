@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Queue?",
+            "content": "A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle. Think of it like a line of people waiting - the first person to join the line is the first one to leave."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Operations",
+            "content": "The two primary operations in a queue are: enqueue (add an element to the rear) and dequeue (remove an element from the front). There's also peek/front operation to view the first element without removing it."
+        },
+        {
+            "type": "question",
+            "prompt": "What principle does a queue follow?",
+            "correctAnswer": "First-In-First-Out (FIFO)",
+            "incorrectAnswers": ["Last-In-First-Out (LIFO)", "Random Access", "Priority Based"],
+            "explanation": "Queues follow FIFO - the first element added is the first one to be removed, like a line at a store."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Implementation",
+            "content": "Queues can be implemented using arrays or linked lists. Array implementation might require circular arrays for efficiency, while linked lists provide more flexible memory management."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of enqueue operation in a queue?",
+            "correctAnswer": "O(1)",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "Enqueue operation adds an element to the rear of the queue, which is a constant time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Applications",
+            "content": "Queues are used in many scenarios: printer job scheduling, process scheduling in operating systems, breadth-first search in graphs, and handling requests in web servers."
+        },
+        {
+            "type": "learn",
+            "title": "Types of Queues",
+            "content": "Different types include: simple queue, circular queue, priority queue, and double-ended queue (deque). Each type has specific use cases and implementation considerations."
+        },
+        {
+            "type": "question",
+            "prompt": "Which queue type allows insertion and deletion at both ends?",
+            "correctAnswer": "Double-ended queue (Deque)",
+            "incorrectAnswers": ["Circular Queue", "Priority Queue", "Simple Queue"],
+            "explanation": "A deque (double-ended queue) allows elements to be added or removed from either end."
+        },
+        {
+            "type": "learn",
+            "title": "Circular Queue",
+            "content": "A circular queue is an efficient implementation using a fixed-size array where the last position connects back to the first, avoiding the need to shift elements."
+        },
+        {
+            "type": "question",
+            "prompt": "What happens when you try to dequeue from an empty queue?",
+            "correctAnswer": "Queue underflow error",
+            "incorrectAnswers": ["Returns null", "Queue overflow error", "Returns the last element"],
+            "explanation": "Attempting to remove an element from an empty queue results in a queue underflow error."
+        },
+        {
+            "type": "learn",
+            "title": "Priority Queue",
+            "content": "A priority queue is a special type of queue where elements have priorities. Elements with higher priority are dequeued before elements with lower priority, regardless of their order of entry."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Memory Management",
+            "content": "In array implementation, keeping track of front and rear pointers is crucial. When using a circular array, modulo arithmetic helps wrap around the array indices."
+        },
+        {
+            "type": "question",
+            "prompt": "Which data structure is best for implementing a print spooler?",
+            "correctAnswer": "Queue",
+            "incorrectAnswers": ["Stack", "Array", "Tree"],
+            "explanation": "A queue is perfect for print spooling as it processes print jobs in the order they were received (FIFO)."
+        },
+        {
+            "type": "learn",
+            "title": "Queue in Operating Systems",
+            "content": "Operating systems use various queues: ready queue for processes waiting to execute, I/O queue for processes waiting for I/O operations, and job queue for all processes in the system."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of accessing the middle element of a queue?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "Not possible"],
+            "explanation": "Accessing middle elements requires dequeuing elements first, making it a linear time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Variations",
+            "content": "Advanced queue variations include blocking queues (used in producer-consumer problems), delay queues (elements become available after a delay), and bounded queues (fixed maximum size)."
+        },
+        {
+            "type": "learn",
+            "title": "Queue in Networking",
+            "content": "Network routers use queues to manage packet traffic. Different queuing disciplines like FIFO, weighted fair queuing, and priority queuing help manage network congestion."
+        },
+        {
+            "type": "question",
+            "prompt": "Which of these is NOT a typical queue operation?",
+            "correctAnswer": "insert_middle",
+            "incorrectAnswers": ["enqueue", "dequeue", "peek"],
+            "explanation": "insert_middle is not a standard queue operation as queues only allow modifications at the ends."
+        },
+        {
+            "type": "learn",
+            "title": "Queue Design Patterns",
+            "content": "Queues are fundamental in message queuing systems, event handling, and task scheduling. They help decouple components in distributed systems and manage asynchronous operations."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the space complexity of a queue?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "O(n²)"],
+            "explanation": "A queue's space complexity is linear, proportional to the number of elements it stores."
+        }
+    ]
+}

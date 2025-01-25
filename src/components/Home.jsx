@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 import { Box, Typography, Button, Card, CardContent } from '@mui/material';
 
 const HomePage = () => {
@@ -79,7 +80,8 @@ const HomePage = () => {
           py: 1.5,
           fontSize: '1.2rem'
         }}
-        href="/learn"
+        component={Link}
+        to="/learn"
       >
         Start Now
       </Button>

@@ -9,6 +9,7 @@ import '@fontsource/roboto/700.css';
 import Navbar from './components/Navbar';
 import Roadmap from './components/Roadmap';
 import Home from './components/Home';
+import Quiz from './components/Quiz';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Roadmap />} />
+        <Route path="/quiz/:topic" element={<Quiz />} />
       </Routes>
     </Router>
 

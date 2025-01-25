@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Linked List?",
+            "content": "A linked list is a linear data structure where elements (nodes) are connected using pointers/references. Each node contains data and a reference to the next node. Unlike arrays, linked lists don't require contiguous memory allocation."
+        },
+        {
+            "type": "learn",
+            "title": "Types of Linked Lists",
+            "content": "There are three main types: singly linked lists (nodes point to next node), doubly linked lists (nodes point to both next and previous nodes), and circular linked lists (last node points back to first node)."
+        },
+        {
+            "type": "question",
+            "prompt": "What is stored in each node of a singly linked list?",
+            "correctAnswer": "Data and a reference to the next node",
+            "incorrectAnswers": ["Only data", "Data and index number", "Data and references to both next and previous nodes"],
+            "explanation": "Each node in a singly linked list contains data and a pointer/reference to the next node in the sequence."
+        },
+        {
+            "type": "learn",
+            "title": "Basic Operations",
+            "content": "Common operations include: insertion (at beginning, end, or middle), deletion, traversal, and searching. The head pointer keeps track of the first node, and is essential for accessing the list."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of accessing an element by index in a linked list?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "O(n²)"],
+            "explanation": "Unlike arrays, linked lists require traversing from the head to reach a specific index, making it a linear time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Advantages",
+            "content": "Linked lists are dynamic in size, efficient for insertions and deletions at known positions, and don't require contiguous memory. They can grow or shrink during runtime without memory waste."
+        },
+        {
+            "type": "learn",
+            "title": "Disadvantages",
+            "content": "Random access is not allowed (must traverse from beginning), extra memory is needed for storing references, and they're not cache-friendly due to non-contiguous memory storage."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of inserting at the beginning of a linked list?",
+            "correctAnswer": "O(1)",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "Inserting at the beginning only requires updating the head pointer and one reference, making it a constant time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Doubly Linked Lists",
+            "content": "In a doubly linked list, each node has references to both next and previous nodes. This allows bidirectional traversal but requires more memory for the extra references."
+        },
+        {
+            "type": "question",
+            "prompt": "Which linked list type allows backward traversal?",
+            "correctAnswer": "Doubly Linked List",
+            "incorrectAnswers": ["Singly Linked List", "Array List", "Circular Linked List"],
+            "explanation": "Doubly linked lists maintain previous node references, enabling backward traversal."
+        },
+        {
+            "type": "learn",
+            "title": "Circular Linked Lists",
+            "content": "In a circular linked list, the last node points back to the first node, creating a circle. This can be useful for applications requiring cyclic data representation."
+        },
+        {
+            "type": "learn",
+            "title": "Common Problems",
+            "content": "Common linked list problems include detecting cycles, finding the middle element, reversing the list, and detecting intersections between two lists."
+        },
+        {
+            "type": "question",
+            "prompt": "How can you detect a cycle in a linked list?",
+            "correctAnswer": "Using Floyd's Cycle-Finding Algorithm (Fast and Slow pointers)",
+            "incorrectAnswers": ["Using a counter", "Checking the last node", "Comparing node values"],
+            "explanation": "Floyd's algorithm uses two pointers moving at different speeds to detect cycles efficiently."
+        },
+        {
+            "type": "learn",
+            "title": "Memory Management",
+            "content": "Proper memory management is crucial in linked lists. When deleting nodes, we must ensure proper deallocation of memory to prevent memory leaks."
+        },
+        {
+            "type": "question",
+            "prompt": "What happens if we lose the head pointer of a linked list?",
+            "correctAnswer": "The entire list becomes inaccessible",
+            "incorrectAnswers": ["Only the first node is lost", "The list becomes circular", "Nothing happens"],
+            "explanation": "The head pointer is the only way to access the linked list; losing it means losing access to all nodes."
+        },
+        {
+            "type": "learn",
+            "title": "Applications",
+            "content": "Linked lists are used in implementing stacks, queues, hash tables (chaining), undo functionality in software, and polynomial manipulation where terms are stored in nodes."
+        },
+        {
+            "type": "learn",
+            "title": "Advanced Concepts",
+            "content": "Advanced concepts include skip lists (hierarchical linked lists), XOR linked lists (memory-efficient doubly linked lists), and self-organizing lists."
+        },
+        {
+            "type": "question",
+            "prompt": "Which operation is more efficient in a linked list compared to an array?",
+            "correctAnswer": "Insertion at the beginning",
+            "incorrectAnswers": ["Random access", "Binary search", "Accessing the last element"],
+            "explanation": "Linked lists excel at insertions at the beginning, requiring only pointer updates versus shifting elements in an array."
+        },
+        {
+            "type": "learn",
+            "title": "Implementation Tips",
+            "content": "When implementing linked lists, always handle edge cases (empty list, single node), maintain proper pointer updates, and consider using sentinel nodes for simpler operations."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the space complexity of a doubly linked list?",
+            "correctAnswer": "O(n) with additional overhead",
+            "incorrectAnswers": ["O(1)", "O(log n)", "O(n²)"],
+            "explanation": "Doubly linked lists require extra space for previous pointers, making them more memory-intensive than singly linked lists."
+        }
+    ]
+}

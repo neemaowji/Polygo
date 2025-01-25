@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Box } from '@mui/material';
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 
 
 const Roadmap = () => {
   const nodes = [
-    { text: 'List', offset: 0 },
-    { text: 'Stack', offset: -100 },
-    { text: 'Queue', offset: 100 },
-    { text: 'Linked List', offset: -100 },
-    { text: 'Tree', offset: 100 },
-    { text: 'Heap', offset: -100 },
-    { text: 'Hash Table', offset: 100 }
+    { text: 'list', offset: 0 },
+    { text: 'stack', offset: -100 },
+    { text: 'queue', offset: 100 },
+    { text: 'linked list', offset: -100 },
+    { text: 'tree', offset: 100 },
+    { text: 'heap', offset: -100 },
+    { text: 'hash table', offset: 100 }
   ];
 
   return (
@@ -39,7 +39,7 @@ const Roadmap = () => {
         >
           <Button
             component={Link}
-            to={`/learn/${node.text}`}
+            to={`/quiz/${node.text}`}
             variant="contained"
             sx={{
               width: '200px',

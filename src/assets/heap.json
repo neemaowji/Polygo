@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Heap?",
+            "content": "A heap is a specialized tree-based data structure that satisfies the heap property. In a max heap, parent nodes are always greater than or equal to their children. In a min heap, parent nodes are always less than or equal to their children."
+        },
+        {
+            "type": "learn",
+            "title": "Heap Structure",
+            "content": "A heap is typically implemented as a complete binary tree, which means all levels except possibly the last are filled, and nodes are filled from left to right. This allows for efficient array representation."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the main property of a max heap?",
+            "correctAnswer": "Parent nodes are always greater than or equal to their children",
+            "incorrectAnswers": ["Parent nodes are always less than their children", "Nodes are sorted left to right", "All nodes are equal"],
+            "explanation": "In a max heap, every parent node must have a value greater than or equal to its children's values."
+        },
+        {
+            "type": "learn",
+            "title": "Array Representation",
+            "content": "Heaps can be efficiently stored in arrays. For a node at index i, its left child is at 2i + 1, right child at 2i + 2, and its parent is at (i-1)/2 (integer division)."
+        },
+        {
+            "type": "question",
+            "prompt": "For a node at index i in an array-based heap, where is its left child?",
+            "correctAnswer": "2i + 1",
+            "incorrectAnswers": ["2i", "i + 1", "i * 2"],
+            "explanation": "In a zero-based array representation of a heap, the left child of node at index i is at position 2i + 1."
+        },
+        {
+            "type": "learn",
+            "title": "Basic Operations",
+            "content": "The main operations are insert (add an element) and extract-min/max (remove and return the root). Both maintain the heap property through heapify operations."
+        },
+        {
+            "type": "learn",
+            "title": "Heapify",
+            "content": "Heapify is the process of maintaining the heap property by comparing a node with its children and swapping if necessary. This process may continue recursively down the tree."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of inserting an element into a heap?",
+            "correctAnswer": "O(log n)",
+            "incorrectAnswers": ["O(1)", "O(n)", "O(n²)"],
+            "explanation": "Insertion requires placing the element at the end and bubbling up, which takes logarithmic time in the worst case."
+        },
+        {
+            "type": "learn",
+            "title": "Priority Queues",
+            "content": "Heaps are commonly used to implement priority queues, where elements with higher (or lower) priorities are served first. This is useful in scheduling and event-driven simulations."
+        },
+        {
+            "type": "question",
+            "prompt": "Which operation removes and returns the root element of a heap?",
+            "correctAnswer": "Extract-min/max",
+            "incorrectAnswers": ["Insert", "Peek", "Search"],
+            "explanation": "Extract-min (for min heap) or extract-max (for max heap) removes and returns the root element while maintaining the heap property."
+        },
+        {
+            "type": "learn",
+            "title": "Heap Applications",
+            "content": "Heaps are used in heap sort, finding the k largest/smallest elements, median maintenance, and graph algorithms like Dijkstra's shortest path."
+        },
+        {
+            "type": "learn",
+            "title": "Heap Sort",
+            "content": "Heap sort uses a heap to sort elements. It first builds a heap from the array, then repeatedly extracts the maximum element to get a sorted sequence."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of heap sort?",
+            "correctAnswer": "O(n log n)",
+            "incorrectAnswers": ["O(n)", "O(n²)", "O(log n)"],
+            "explanation": "Heap sort requires building the heap O(n) and n extract-max operations O(log n), resulting in O(n log n)."
+        },
+        {
+            "type": "learn",
+            "title": "Binary Heaps vs. Other Heaps",
+            "content": "While binary heaps are most common, other types include d-ary heaps (nodes have d children), fibonacci heaps, and leftist heaps. Each has specific use cases and performance characteristics."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the space complexity of a binary heap?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(log n)", "O(1)", "O(n²)"],
+            "explanation": "A binary heap requires linear space to store n elements in its array representation."
+        },
+        {
+            "type": "learn",
+            "title": "Building a Heap",
+            "content": "A heap can be built from an unsorted array by repeatedly inserting elements, or more efficiently by starting from the last non-leaf node and heapifying down."
+        },
+        {
+            "type": "learn",
+            "title": "Performance Considerations",
+            "content": "While heaps provide fast access to the minimum/maximum element, they don't maintain sorted order of other elements. Searching for arbitrary elements takes O(n) time."
+        },
+        {
+            "type": "question",
+            "prompt": "Which operation in a heap has O(1) time complexity?",
+            "correctAnswer": "Peek at the root",
+            "incorrectAnswers": ["Search for an element", "Delete an arbitrary element", "Sort all elements"],
+            "explanation": "Looking at the root (minimum in min-heap or maximum in max-heap) is constant time as it's always at the first position."
+        },
+        {
+            "type": "learn",
+            "title": "Memory Efficiency",
+            "content": "The array representation of heaps is memory-efficient as it doesn't require storing explicit pointers between nodes, unlike other tree implementations."
+        },
+        {
+            "type": "question",
+            "prompt": "What makes heaps efficient for priority queues?",
+            "correctAnswer": "Constant time access to highest/lowest priority element",
+            "incorrectAnswers": ["Random access to elements", "Sorted storage", "Linear insertion time"],
+            "explanation": "Heaps provide O(1) access to the highest/lowest priority element and O(log n) insertion/deletion, making them ideal for priority queues."
+        }
+    ]
+}

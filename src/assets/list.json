@@ -1,0 +1,90 @@
+{
+    "content":
+    [
+        {
+            "type": "learn",
+            "title": "What is a List?",
+            "content": "A list is a fundamental data structure that stores elements in a sequential order. Each element can be accessed directly using an index, starting from 0. Lists are dynamic, meaning they can grow or shrink in size."
+        },
+        {
+            "type": "learn",
+            "title": "List Operations",
+            "content": "Common list operations include: append (add to end), insert (add at position), remove, and access by index. Most operations on lists are straightforward and intuitive, making them one of the most widely used data structures."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of accessing an element by index in a list?",
+            "correctAnswer": "O(1)",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "List access by index is constant time because we can directly calculate the memory location of any element."
+        },
+        {
+            "type": "learn",
+            "title": "List Memory",
+            "content": "Lists are typically implemented using contiguous memory blocks. This means all elements are stored next to each other in memory, allowing for efficient access but potentially requiring reallocation when the list grows beyond its capacity."
+        },
+        {
+            "type": "learn",
+            "title": "List vs Array",
+            "content": "While similar, lists and arrays have key differences. Lists are dynamic and can change size, while arrays typically have fixed sizes. Lists also often provide built-in methods for common operations that arrays might not have."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of adding an element to the end of a list?",
+            "correctAnswer": "O(1) amortized",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "While occasional resizing takes O(n), the amortized cost of appending is constant time."
+        },
+        {
+            "type": "learn",
+            "title": "List Iteration",
+            "content": "Lists can be traversed using various methods: for loops with indices, for-each loops, or iterators. Each method has its advantages, with for-each being the most pythonic and readable for simple traversals."
+        },
+        {
+            "type": "learn",
+            "title": "List Slicing",
+            "content": "List slicing allows you to create new lists containing a subset of elements from the original list. The syntax is typically list[start:end:step], where all parameters are optional."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of inserting an element at the beginning of a list?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "O(n²)"],
+            "explanation": "Inserting at the beginning requires shifting all existing elements one position to the right."
+        },
+        {
+            "type": "learn",
+            "title": "List Methods",
+            "content": "Common list methods include append(), extend(), insert(), remove(), pop(), index(), count(), sort(), and reverse(). These built-in methods make list manipulation efficient and convenient."
+        },
+        {
+            "type": "learn",
+            "title": "List Comprehension",
+            "content": "List comprehension is a concise way to create lists based on existing lists. It combines a for loop and creation of new elements into a single line, making code more readable and efficient."
+        },
+        {
+            "type": "question",
+            "prompt": "Which operation is more efficient on a list?",
+            "correctAnswer": "Appending to the end",
+            "incorrectAnswers": ["Inserting at the beginning", "Inserting in the middle", "Random insertion"],
+            "explanation": "Appending to the end is most efficient as it doesn't require shifting other elements."
+        },
+        {
+            "type": "learn",
+            "title": "List Performance",
+            "content": "List performance varies by operation. Access and append are typically O(1), while insertion and deletion are O(n) in the worst case. Understanding these characteristics helps in choosing the right operations for your needs."
+        },
+        {
+            "type": "learn",
+            "title": "Common List Patterns",
+            "content": "Common patterns include using lists as stacks (with append and pop), as queues (with append and pop(0)), or as buffers for collecting results. Each pattern has its own performance implications."
+        },
+        {
+            "type": "question",
+            "prompt": "What happens when a list runs out of capacity?",
+            "correctAnswer": "It automatically resizes by creating a new, larger array",
+            "incorrectAnswers": ["It throws an error", "It starts overwriting elements", "It creates a linked list"],
+            "explanation": "Lists automatically resize by creating a new array (typically 2x size) and copying elements over."
+        }
+    ]
+}

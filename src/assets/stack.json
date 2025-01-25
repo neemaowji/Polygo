@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Stack?",
+            "content": "A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle. Think of it like a stack of plates - you can only add or remove plates from the top."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Operations",
+            "content": "The two primary operations in a stack are: push (add an element to the top) and pop (remove the top element). There's also peek/top operation to view the top element without removing it."
+        },
+        {
+            "type": "question",
+            "prompt": "What principle does a stack follow?",
+            "correctAnswer": "Last-In-First-Out (LIFO)",
+            "incorrectAnswers": ["First-In-First-Out (FIFO)", "Random Access", "Ordered Access"],
+            "explanation": "Stacks follow LIFO - the last element added is the first one to be removed."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Implementation",
+            "content": "Stacks can be implemented using arrays or linked lists. Array implementation is simpler but may need resizing, while linked list implementation is more flexible with memory."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of push operation in a stack?",
+            "correctAnswer": "O(1)",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "Push operation adds an element to the top of the stack, which is always a constant time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Applications",
+            "content": "Stacks are used in many applications: function call management (call stack), undo operations in editors, expression evaluation, and backtracking algorithms."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Overflow",
+            "content": "Stack overflow occurs when you try to push an element onto a full stack. In recursive functions, this happens when the call stack exceeds its maximum size due to too many function calls."
+        },
+        {
+            "type": "question",
+            "prompt": "Which operation would you use to view the top element without removing it?",
+            "correctAnswer": "peek",
+            "incorrectAnswers": ["push", "pop", "insert"],
+            "explanation": "Peek (or top) allows you to see the top element without modifying the stack."
+        },
+        {
+            "type": "learn",
+            "title": "Empty Stack Operations",
+            "content": "Attempting to pop or peek from an empty stack typically results in an underflow error. Good stack implementations should include isEmpty() method to check before operations."
+        },
+        {
+            "type": "question",
+            "prompt": "What happens when you try to pop from an empty stack?",
+            "correctAnswer": "Stack underflow error",
+            "incorrectAnswers": ["Returns null", "Stack overflow error", "Returns the last element"],
+            "explanation": "Attempting to remove an element from an empty stack results in a stack underflow error."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Memory Management",
+            "content": "In programming languages, the call stack manages function calls and local variables. Each function call creates a new stack frame containing its local variables and parameters."
+        },
+        {
+            "type": "learn",
+            "title": "Stack vs Heap",
+            "content": "The stack is used for static memory allocation and is limited in size, while the heap is used for dynamic memory allocation. Stack memory is typically faster to allocate than heap memory."
+        },
+        {
+            "type": "question",
+            "prompt": "Which data structure would be best for implementing an undo feature?",
+            "correctAnswer": "Stack",
+            "incorrectAnswers": ["Queue", "Array", "Tree"],
+            "explanation": "A stack is perfect for undo operations as it maintains the order of actions in LIFO order."
+        },
+        {
+            "type": "learn",
+            "title": "Stack in System Architecture",
+            "content": "In computer architecture, the stack pointer is a register that tracks the top of the stack. It's updated automatically when values are pushed or popped from the stack."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of accessing the middle element of a stack?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "Not possible"],
+            "explanation": "Accessing middle elements requires removing top elements first, making it a linear time operation."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Variations",
+            "content": "Variations of stacks include double-ended stacks, minimum stacks (tracking minimum element), and stack with find-middle operations using additional data structures."
+        },
+        {
+            "type": "learn",
+            "title": "Expression Evaluation",
+            "content": "Stacks are crucial in evaluating arithmetic expressions, especially in converting between infix, prefix, and postfix notations, and in checking for balanced parentheses."
+        },
+        {
+            "type": "question",
+            "prompt": "Which of these is NOT a typical stack operation?",
+            "correctAnswer": "insert_middle",
+            "incorrectAnswers": ["push", "pop", "peek"],
+            "explanation": "insert_middle is not a standard stack operation as stacks only allow modifications at the top."
+        },
+        {
+            "type": "learn",
+            "title": "Stack Design Patterns",
+            "content": "Stacks are often used in design patterns like the Command pattern for undo/redo functionality, and in backtracking algorithms for solving mazes or puzzles."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the space complexity of a stack?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(1)", "O(log n)", "O(n²)"],
+            "explanation": "A stack's space complexity is linear, proportional to the number of elements it stores."
+        }
+    ]
+}

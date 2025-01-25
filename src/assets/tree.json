@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Tree?",
+            "content": "A tree is a hierarchical data structure composed of nodes connected by edges. Each node contains data and references to its child nodes. The topmost node is called the root, and nodes with no children are called leaves."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Terminology",
+            "content": "Key terms include: root (top node), parent (node with children), child (node connected to parent), leaf (node with no children), height (longest path to leaf), and depth (distance from root)."
+        },
+        {
+            "type": "question",
+            "prompt": "Which node in a tree has no parent?",
+            "correctAnswer": "Root node",
+            "incorrectAnswers": ["Leaf node", "Internal node", "Child node"],
+            "explanation": "The root node is the topmost node in a tree and is the only node without a parent."
+        },
+        {
+            "type": "learn",
+            "title": "Binary Trees",
+            "content": "A binary tree is a tree where each node has at most two children, typically called left and right child. This structure is fundamental to many tree applications and algorithms."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the maximum number of children a node can have in a binary tree?",
+            "correctAnswer": "2",
+            "incorrectAnswers": ["1", "3", "Unlimited"],
+            "explanation": "By definition, a binary tree node can have at most two children: a left child and a right child."
+        },
+        {
+            "type": "learn",
+            "title": "Binary Search Trees (BST)",
+            "content": "A BST is a binary tree with the property that the left subtree of any node contains only values less than the node's value, and the right subtree contains only values greater than it."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Traversal",
+            "content": "Common traversal methods are: in-order (left-root-right), pre-order (root-left-right), post-order (left-right-root), and level-order (breadth-first). Each serves different purposes."
+        },
+        {
+            "type": "question",
+            "prompt": "Which traversal visits the root node first?",
+            "correctAnswer": "Pre-order",
+            "incorrectAnswers": ["In-order", "Post-order", "Level-order"],
+            "explanation": "Pre-order traversal visits the root first, then the left subtree, and finally the right subtree."
+        },
+        {
+            "type": "learn",
+            "title": "Balanced Trees",
+            "content": "A balanced tree has similar heights for all subtrees. Common types include AVL trees and Red-Black trees, which maintain balance through rotations during insertions and deletions."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of searching in a balanced BST?",
+            "correctAnswer": "O(log n)",
+            "incorrectAnswers": ["O(1)", "O(n)", "O(n²)"],
+            "explanation": "In a balanced BST, each operation reduces the search space by half, resulting in logarithmic time complexity."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Applications",
+            "content": "Trees are used in file systems, database indexing, syntax parsing, decision-making algorithms, and hierarchical data representation like HTML DOM."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Operations",
+            "content": "Basic operations include insertion, deletion, searching, and traversal. The efficiency of these operations depends on the tree's structure and balance."
+        },
+        {
+            "type": "question",
+            "prompt": "What makes a binary search tree efficient for searching?",
+            "correctAnswer": "Ordered arrangement of nodes",
+            "incorrectAnswers": ["Number of nodes", "Tree height", "Number of leaves"],
+            "explanation": "The ordered arrangement (left < root < right) allows eliminating half the remaining nodes at each step."
+        },
+        {
+            "type": "learn",
+            "title": "Complete Trees",
+            "content": "A complete binary tree is one where all levels except possibly the last are completely filled, and all nodes are as far left as possible. This property is important in heap implementations."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the maximum number of nodes at level k in a binary tree?",
+            "correctAnswer": "2^k",
+            "incorrectAnswers": ["k", "k^2", "2k"],
+            "explanation": "At each level k (starting from 0), a binary tree can have at most 2^k nodes."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Height",
+            "content": "The height of a tree is the length of the longest path from root to leaf. A balanced tree of n nodes has a height of approximately log(n), while an unbalanced tree can have height n."
+        },
+        {
+            "type": "learn",
+            "title": "Special Trees",
+            "content": "Special tree types include B-trees (used in databases), tries (for string operations), and expression trees (for mathematical expressions). Each type is optimized for specific use cases."
+        },
+        {
+            "type": "question",
+            "prompt": "Which tree structure is commonly used in database indexing?",
+            "correctAnswer": "B-tree",
+            "incorrectAnswers": ["Binary tree", "Red-Black tree", "AVL tree"],
+            "explanation": "B-trees are optimized for disk access and maintain balance, making them ideal for database indexing."
+        },
+        {
+            "type": "learn",
+            "title": "Tree Implementation",
+            "content": "Trees can be implemented using node objects with pointers, arrays (for complete binary trees), or other specialized structures depending on the application needs."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the space complexity of a binary tree?",
+            "correctAnswer": "O(n)",
+            "incorrectAnswers": ["O(log n)", "O(1)", "O(n²)"],
+            "explanation": "A binary tree with n nodes requires O(n) space to store both the node values and their references."
+        }
+    ]
+}

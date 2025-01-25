@@ -1,0 +1,120 @@
+{
+    "content": [
+        {
+            "type": "learn",
+            "title": "What is a Hash Table?",
+            "content": "A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets, from which the desired value can be found."
+        },
+        {
+            "type": "learn",
+            "title": "Hash Functions",
+            "content": "A hash function converts keys into array indices. A good hash function should be deterministic, efficient to compute, and uniformly distribute keys across the available space to minimize collisions."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the main purpose of a hash function?",
+            "correctAnswer": "Convert keys into array indices",
+            "incorrectAnswers": ["Sort data", "Encrypt data", "Compress data"],
+            "explanation": "Hash functions map keys to array indices, allowing for efficient storage and retrieval of data in a hash table."
+        },
+        {
+            "type": "learn",
+            "title": "Collision Resolution",
+            "content": "Collisions occur when two keys hash to the same index. Common resolution methods include chaining (using linked lists at each index) and open addressing (probing for next empty slot)."
+        },
+        {
+            "type": "question",
+            "prompt": "What is a collision in hash tables?",
+            "correctAnswer": "When two different keys hash to the same index",
+            "incorrectAnswers": ["When the table is full", "When a key is not found", "When the hash function fails"],
+            "explanation": "A collision occurs when the hash function produces the same index for two different keys."
+        },
+        {
+            "type": "learn",
+            "title": "Load Factor",
+            "content": "The load factor is the ratio of filled slots to total slots in the hash table. It's crucial for performance - a higher load factor means more collisions but better space usage."
+        },
+        {
+            "type": "learn",
+            "title": "Chaining",
+            "content": "In chaining, each bucket contains a linked list of elements that hash to that bucket. This handles collisions by allowing multiple elements to exist at the same index."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the time complexity of insertion in a hash table with chaining?",
+            "correctAnswer": "O(1) average case",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n²)"],
+            "explanation": "With a good hash function and reasonable load factor, insertion takes constant time on average."
+        },
+        {
+            "type": "learn",
+            "title": "Open Addressing",
+            "content": "Open addressing resolves collisions by probing for next empty slots. Common probing methods include linear probing, quadratic probing, and double hashing."
+        },
+        {
+            "type": "question",
+            "prompt": "Which collision resolution method stores all elements in the main array?",
+            "correctAnswer": "Open Addressing",
+            "incorrectAnswers": ["Chaining", "Separate Chaining", "Linked List"],
+            "explanation": "Open addressing resolves collisions by finding empty slots in the main array rather than using external data structures."
+        },
+        {
+            "type": "learn",
+            "title": "Rehashing",
+            "content": "When a hash table becomes too full, it needs to be resized and all elements must be rehashed into the new table. This maintains performance but is computationally expensive."
+        },
+        {
+            "type": "learn",
+            "title": "Applications",
+            "content": "Hash tables are used in database indexing, caches, symbol tables in compilers, spell checkers, and implementing sets and maps in programming languages."
+        },
+        {
+            "type": "question",
+            "prompt": "When should rehashing be performed?",
+            "correctAnswer": "When the load factor exceeds a threshold",
+            "incorrectAnswers": ["After every insertion", "When searching fails", "When deleting elements"],
+            "explanation": "Rehashing is typically performed when the load factor gets too high to maintain efficient operations."
+        },
+        {
+            "type": "learn",
+            "title": "Performance Factors",
+            "content": "Hash table performance depends on the hash function quality, load factor, collision resolution method, and initial table size. Poor choices can lead to degraded performance."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the ideal time complexity for hash table lookups?",
+            "correctAnswer": "O(1)",
+            "incorrectAnswers": ["O(n)", "O(log n)", "O(n log n)"],
+            "explanation": "With a good hash function and load factor, hash tables provide constant-time lookups on average."
+        },
+        {
+            "type": "learn",
+            "title": "Deletion Strategies",
+            "content": "Deletion in open addressing requires special handling to maintain the probe sequences. Often, a 'tombstone' marker is used instead of actually removing elements."
+        },
+        {
+            "type": "learn",
+            "title": "Perfect Hashing",
+            "content": "Perfect hashing guarantees no collisions by using a carefully constructed hash function for a known set of keys. This is possible when the key set is static."
+        },
+        {
+            "type": "question",
+            "prompt": "What is the main disadvantage of chaining?",
+            "correctAnswer": "Extra memory for linked list nodes",
+            "incorrectAnswers": ["Slower insertion", "Complex hash function", "Limited capacity"],
+            "explanation": "Chaining requires additional memory to store the linked list nodes used for collision resolution."
+        },
+        {
+            "type": "learn",
+            "title": "Security Considerations",
+            "content": "Hash tables can be vulnerable to algorithmic complexity attacks if attackers can predict the hash function and generate many keys that collide, causing worst-case performance."
+        },
+        {
+            "type": "question",
+            "prompt": "What happens if the hash table size is too small?",
+            "correctAnswer": "Increased number of collisions",
+            "incorrectAnswers": ["Faster lookups", "Less memory usage", "Better performance"],
+            "explanation": "A small table size leads to more collisions as multiple keys are forced to share the same indices."
+        }
+    ]
+}
