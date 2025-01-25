@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Roadmap from './components/Roadmap';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
+import Practice from './components/Practice';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Roadmap />} />
         <Route path="/quiz/:topic" element={<Quiz />} />
+        <Route path="/practice" element={<Practice />} />
       </Routes>
     </Router>
 
