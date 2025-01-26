@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
 
-
-
+import { collection, getDocs } from 'firebase/firestore';
+import { Question } from '/firebase';
 
 import React, { useContext, useEffect, useState } from 'react';
-import { FirebaseContext } from './FirebaseContext'; 
-import { collection, getDocs } from 'firebase/firestore';
+//import { FirebaseContext } from './FirebaseContext'; 
 
 function QuestionList() {
   const { data } = useContext(FirebaseContext);

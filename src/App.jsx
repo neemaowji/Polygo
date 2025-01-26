@@ -11,9 +11,12 @@ import Roadmap from './components/Roadmap';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Practice from './components/Practice';
+import QuestionList from './components/QuestionList';
 // Firebase services
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore'; 
+
+
 
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
         <Route path="/learn" element={<Roadmap />} />
         <Route path="/quiz/:topic" element={<Quiz />} />
         <Route path="/practice" element={<Practice />} />
+        <Route path="/questionlist" element={<QuestionList />} />
       </Routes>
     </Router>
 
