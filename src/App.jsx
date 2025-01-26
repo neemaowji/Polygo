@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router';
 import './App.css'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -12,6 +12,13 @@ import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Practice from './components/Practice';
 import About from './components/About';
+import Login from './components/Login';
+import ProtectedRoute from './components/Protectedroute';
+
+import { auth, googleProvider } from './firebase';
+import { signInWithPopup, signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 
 
@@ -21,9 +28,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/learn" element={<Roadmap />} />
-        <Route path="/quiz/:topic" element={<Quiz />} />
-        <Route path="/practice" element={<Practice />} />
+        <Route path="/login" element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/learn" element={<Roadmap />} />
+          <Route path="/quiz/:topic" element={<Quiz />} />
+          <Route path="/practice" element={<Practice />} />
+        </Route>
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>

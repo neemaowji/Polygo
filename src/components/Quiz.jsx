@@ -13,6 +13,9 @@ import {
   CircularProgress
 } from '@mui/material';
 import { useParams } from 'react-router';
+import { auth, realtimeDb } from '../firebase';
+import { ref, onValue, set } from 'firebase/database';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const Quiz = () => {
   const { topic } = useParams();
@@ -24,6 +27,8 @@ const Quiz = () => {
   const [quizData, setQuizData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [userId, setUserId] = useState(null);
+
 
   // Load quiz data
   useEffect(() => {
@@ -51,6 +56,42 @@ const Quiz = () => {
       setShuffledAnswers(all.sort(() => Math.random() - 0.5));
     }
   }, [currentIndex, quizData]);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUserId(user.uid);
+        loadUserProgress(user.uid);
+      } else {
+        setUserId(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (userId && quizData) {
+      saveUserProgress();
+    }
+  }, [currentIndex, userId, quizData]);
+
+  const loadUserProgress = (uid) => {
+    const userProgressRef = ref(realtimeDb, `users/${uid}/${topic}`);
+    onValue(userProgressRef, (snapshot) => {
+      const progress = snapshot.val();
+      if (progress !== null) {
+        setCurrentIndex(progress);
+      }
+    });
+  };
+
+  const saveUserProgress = () => {
+    if (userId) {
+      set(ref(realtimeDb, `users/${userId}/${topic}`), currentIndex);
+    }
+  };
+
 
   if (isLoading) return <Box sx={{ display: 'flex', justifyContent: 'center' }}><CircularProgress /></Box>;
   if (error) return <Box sx={{ color: 'error.main' }}>Error loading quiz: {error}</Box>;

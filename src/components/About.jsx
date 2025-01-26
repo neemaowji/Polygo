@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router'
 import { Box, Typography, Button, Card, CardContent } from '@mui/material';
 
-const HomePage = () => {
+const About = () => {
   return (
     <Box
       sx={{
@@ -31,4 +31,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default About;
