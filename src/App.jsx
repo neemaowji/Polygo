@@ -13,7 +13,7 @@ import Quiz from './components/Quiz';
 import Practice from './components/Practice';
 import About from './components/About';
 import Login from './components/Login';
-import ProtectedRoute from './components/Protectedroute';
+import ProtectedRoute from './components/ProtectedRoute';
 
 import { auth, googleProvider } from './firebase';
 import { signInWithPopup, signOut } from 'firebase/auth';
