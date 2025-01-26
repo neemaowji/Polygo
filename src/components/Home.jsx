@@ -20,6 +20,16 @@ const HomePage = () => {
         component="h1" 
         gutterBottom 
         sx={{ 
+          fontSize: { xs: '1rem', md: '2rem' }
+        }}
+      >
+        Welcome to
+      </Typography>
+      <Typography 
+        variant="h2" 
+        component="h1" 
+        gutterBottom 
+        sx={{ 
           fontWeight: 'bold',
           fontSize: { xs: '3rem', md: '4rem' }
         }}

@@ -12,6 +12,7 @@ import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Practice from './components/Practice';
 import QuestionList from './components/QuestionList';
+import About from './components/About';
 // Firebase services
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore'; 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/quiz/:topic" element={<Quiz />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/questionlist" element={<QuestionList />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
 
