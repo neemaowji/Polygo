@@ -24,8 +24,8 @@ const HomePage = () => {
         gameified approach to learning a language, we hoped to replicated the experience to help developers get ready for interviews.
       </Typography>
       <Box
-        component="img"
-        src="src\assets\Polygo Diagram.png"
+        //component="img"
+        //src="src\assets\Polygo Diagram.png"
       />
       </Box>
   );

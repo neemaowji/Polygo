@@ -20,6 +20,7 @@ import { getFirestore } from 'firebase/firestore';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import firebase from 'firebase/compat/app';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -38,6 +39,23 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+document.addEventListener("DOMContentLoaded", event => {
+  const app = firebase.app();
+  console.log("app data\n")
+  console.log(app);
+});
+
+function googleLogin() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+    .then(result => {
+      const user = result.user;
+      document.write('Hello ${user.displayName}');
+      console.log(user)
+    })
+}
 
 function App() {
   return (

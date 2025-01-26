@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
     apiKey: "AIzaSyCatxC4N7bfyJ_Dy8e1Yz2H4sq7C8DqDnE",
     authDomain: "swamphacks-12f7c.firebaseapp.com",
