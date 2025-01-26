@@ -1,8 +1,6 @@
-# React + Vite
+Welcome to Polygo!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Polygo is a platform that lets people learn and practice data structures. Whether you are a begginer or a seasoned programmer, there is something that can appeal to you here. Try to follow the roadmap to learn more about each data structure. When you feel confident, you can start practicing on questions.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Try it out here (can't actually try because Cloudflare blocks authorization)
+https://polygo.study/
