@@ -13,6 +13,7 @@ import Quiz from './components/Quiz';
 import Practice from './components/Practice';
 import About from './components/About';
 import Login from './components/Login';
+import PyPlayground from './components/PyPlayground';
 import ProtectedRoute from './components/Protectedroute';
 
 import { auth, googleProvider } from './firebase';
@@ -33,6 +34,7 @@ function App() {
           <Route path="/learn" element={<Roadmap />} />
           <Route path="/quiz/:topic" element={<Quiz />} />
           <Route path="/practice" element={<Practice />} />
+          <Route path="/PyPlayground" element={<PyPlayground />} />
         </Route>
         <Route path="/about" element={<About />} />
       </Routes>
