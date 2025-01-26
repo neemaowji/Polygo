@@ -1,48 +1,29 @@
+// Login.jsx
 import React, { useEffect, useState } from 'react';
 import { auth, googleProvider } from '../firebase';
-import { signInWithRedirect, signOut, getRedirectResult, onAuthStateChanged } from 'firebase/auth';
+import { signInWithPopup, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router';
-import { Button, Typography, Box, Container, Paper, CircularProgress } from '@mui/material';
+import { Button, Typography, Box, Container, Paper } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 
 const Login = () => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log("Auth state changed:", currentUser);
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
       setUser(currentUser);
-      setLoading(false);
     });
-
-    const handleRedirectResult = async () => {
-      try {
-        setLoading(true);
-        const result = await getRedirectResult(auth);
-        if (result) {
-          console.log("Redirect result:", result);
-          navigate('/learn');
-        }
-      } catch (error) {
-        console.error("Error handling redirect result:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    handleRedirectResult();
-
     return () => unsubscribe();
-  }, [navigate]);
+  }, []);
 
-  const signInWithGoogle = () => {
-    setLoading(true);
-    signInWithRedirect(auth, googleProvider).catch((error) => {
-      console.error("Error initiating Google sign-in:", error);
-      setLoading(false);
-    });
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+      navigate('/learn');
+    } catch (error) {
+      console.error("Error signing in with Google:", error);
+    }
   };
 
   const handleSignOut = async () => {
@@ -52,16 +33,6 @@ const Login = () => {
       console.error("Error signing out:", error);
     }
   };
-
-  if (loading) {
-    return (
-      <Container component="main" maxWidth="xs">
-        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          <CircularProgress />
-        </Box>
-      </Container>
-    );
-  }
 
   return (
     <Container component="main" maxWidth="xs">
