@@ -1,18 +1,19 @@
 
-import { collection, getDocs } from 'firebase/firestore';
-import { Question } from '/firebase';
 
+import { collection, getDocs } from 'firebase/firestore';
+// import { Question } from '/firebase';
+import { getFirestore } from 'firebase/firestore';
 import React, { useContext, useEffect, useState } from 'react';
 //import { FirebaseContext } from './FirebaseContext'; 
 
 function QuestionList() {
-  const { data } = useContext(FirebaseContext);
+  
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
       const db = getFirestore(); 
-      const questionsCol = collection(db, 'question'); 
+      const questionsCol = collection(db, 'Question'); 
       const questionSnapshot = await getDocs(questionsCol);
       const questionList = questionSnapshot.docs.map((doc) => ({
         id: doc.id,
@@ -23,10 +24,10 @@ function QuestionList() {
 
     fetchQuestions();
   }, []);
-
+  console.log(questions)
   return (
     <div>
-      <h1>Question List</h1>
+      {/* <h1>Question List</h1>
       <ul>
         {questions.map((question) => (
           <li key={question.question}>
@@ -36,9 +37,10 @@ function QuestionList() {
             {question.wrong3}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
+
 }
 
 export default QuestionList;
